@@ -1,0 +1,22 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Religion = void 0;
+var Religion;
+(function (Religion) {
+    Religion["Ph\u1EADt_gi\u00E1o"] = "Ph\u1EADt gi\u00E1o";
+    Religion["C\u00F4ng_gi\u00E1o"] = "C\u00F4ng gi\u00E1o";
+    Religion["Tin_L\u00E0nh"] = "Tin L\u00E0nh";
+    Religion["Cao_\u0110\u00E0i"] = "Cao \u0110\u00E0i";
+    Religion["H\u1ED3i_gi\u00E1o"] = "H\u1ED3i gi\u00E1o";
+    Religion["Bah\u00E1\u00ED"] = "Bah\u00E1'\u00ED";
+    Religion["Ch\u0103m_B\u00E0_la_m\u00F4n"] = "Ch\u0103m B\u00E0 la m\u00F4n";
+    Religion["Ky_T\u00F4_gi\u00E1o"] = "Ky T\u00F4 gi\u00E1o";
+    Religion["Hi\u1EBFu_Ngh\u0129a_T\u00E0_L\u01A1n"] = "Hi\u1EBFu Ngh\u0129a T\u00E0 L\u01A1n";
+    Religion["C\u01A1_\u0111\u1ED1c_Ph\u1EE5c_l\u00E2m"] = "C\u01A1 \u0111\u1ED1c Ph\u1EE5c l\u00E2m";
+    Religion["\u0110\u1EA1o_B\u1EEDu_S\u01A1n_K\u1EF3_H\u01B0\u01A1ng"] = "\u0110\u1EA1o B\u1EEDu S\u01A1n K\u1EF3 H\u01B0\u01A1ng";
+    Religion["\u0110\u1EA1o_T\u1EE9_\u00C2n_Hi\u1EBFu_Ngh\u0129a"] = "\u0110\u1EA1o T\u1EE9 \u00C2n Hi\u1EBFu Ngh\u0129a";
+    Religion["T\u1ECBnh_\u0111\u1ED9_c\u01B0_s\u0129_Ph\u1EADt_h\u1ED9i_Vi\u1EC7t_Nam"] = "T\u1ECBnh \u0111\u1ED9 c\u01B0 s\u0129 Ph\u1EADt h\u1ED9i Vi\u1EC7t Nam";
+    Religion["H\u1ED9i_th\u00E1nh_Minh_l\u00FD_\u0111\u1EA1o"] = "H\u1ED9i th\u00E1nh Minh l\u00FD \u0111\u1EA1o - Tam T\u00F4ng Mi\u1EBFu";
+    Religion["Gi\u00E1o_h\u1ED9i_Ph\u1EADt_\u0111\u01B0\u1EDDng_Nam_T\u00F4ng_Minh_S\u01B0_\u0111\u1EA1o"] = "Gi\u00E1o h\u1ED9i Ph\u1EADt \u0111\u01B0\u1EDDng Nam T\u00F4ng Minh S\u01B0 \u0111\u1EA1o";
+    Religion["Kh\u00F4ng"] = "Kh\u00F4ng";
+})(Religion = exports.Religion || (exports.Religion = {}));
