@@ -27,14 +27,14 @@ const mount = (app) => __awaiter(void 0, void 0, void 0, function* () {
     //There will be a client file
     app.use(express_1.default.static(`${__dirname}/client`));
     //Uncomment line bellow when deploy together with dot env
-    // app.get("/*", (_req, res) => res.sendFile(`${__dirname}/client/index.html`))
+    app.get("/*", (_req, res) => res.sendFile(`${__dirname}/client/index.html`));
     const server = new apollo_server_express_1.ApolloServer({
         typeDefs: graphql_1.typeDefs,
         resolvers: graphql_1.resolvers,
         context: ({ req, res }) => ({ db, req, res })
     });
     server.applyMiddleware({ app, path: '/api' });
-    app.get('/', (_req, res) => res.send("hello world"));
+    // app.get('/', (_req, res) => res.send("hello world"))
     console.log("[app]: starting at", port);
     app.listen(port);
 });
