@@ -153,6 +153,8 @@ const handleRegisterMessageFromClient = (clientMessage, db) => __awaiter(void 0,
             yield db.users.findOneAndDelete({ _id: to_id } //Admin is from, user register is to
             );
             yield db.messages.findOneAndDelete({ _id: to_id });
+            //Delete all messages
+            yield db.users.updateMany({ isAdmin: true }, { $pull: { "messages": { _id: to_id } } });
             return "true";
         //Delete the server message to the admin
     }
@@ -191,30 +193,10 @@ exports.messagesResolver = {
                 }
             }
             return data;
-            // const messages  = 
-            //         //Basically load all messages
-            //         let cursor = await db.users.find(
-            //             { _id : viewerId },
-            //             { fields: { messages : 1 } }
-            //             );
-            //         //No need to sort
-            //         cursor.sort({ 
-            //             organization_name: 1
-            //         })
-            //         // cursor = cursor.skip(page > 0 ? (page - 1) * limit : 0);
-            //         cursor = cursor.skip((page - 1) * limit );
-            //         cursor = cursor.limit(limit);
-            //         data.total =  await cursor.count();
-            //         data.results = await cursor.toArray();
-            //         return data;
-            //     } catch(err) {
-            //         throw new Error(`Cannot load message: ${err}`)
-            //     }
         }),
         getUserInfoFromMessage: (_root, { fromId, fromOrganizationId, content, type }, { db }) => __awaiter(void 0, void 0, void 0, function* () {
             const user = yield db.users.findOne({ _id: fromId });
             const userName = user.name;
-            console.log("REached");
             let organizationName = "";
             switch (type) {
                 case MessageType_1.MessageType.TRANSFER:
@@ -223,7 +205,8 @@ exports.messagesResolver = {
                     const member = yield db.members.findOne({ _id: memberId });
                     organizationName = organization.name;
                     const memberName = `${member.lastName} ${member.firstName}`;
-                    return { userName, organizationName, memberName };
+                    const user = yield db.users.findOne({ _id: fromId });
+                    return { userName, organizationName, memberName, email: user.contact };
                 case MessageType_1.MessageType.REGISTER:
                     // let serverMessageContent = "";
                     const registerUser = yield db.users.findOne({ _id: fromId });
@@ -242,7 +225,7 @@ exports.messagesResolver = {
                     else {
                         organizationName = orgContent;
                     }
-                    return { userName, organizationName, memberName: "" };
+                    return { userName, organizationName, memberName: "", email: registerUser.contact };
             }
         })
     },

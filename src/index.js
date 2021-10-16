@@ -34,7 +34,7 @@ const mount = (app) => __awaiter(void 0, void 0, void 0, function* () {
         context: ({ req, res }) => ({ db, req, res })
     });
     server.applyMiddleware({ app, path: '/api' });
-    // app.get('/', (_req, res) => res.send("hello world"))
+    app.get('/', (_req, res) => res.send("hello world"));
     console.log("[app]: starting at", port);
     app.listen(port);
 });

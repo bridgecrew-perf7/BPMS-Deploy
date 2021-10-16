@@ -18,4 +18,6 @@ var Occupation;
     Occupation["N\u00F4ng_nghi\u1EC7p"] = "N\u00F4ng nghi\u1EC7p";
     Occupation["Ngh\u1EC1_t\u1EF1_do"] = "Ngh\u1EC1 t\u1EF1 do";
     Occupation["Ngh\u1EC1_kh\u00E1c"] = "Ngh\u1EC1 kh\u00E1c";
+    Occupation["H\u1ECDc_sinh"] = "H\u1ECDc sinh";
+    Occupation["Sinh_vi\u00EAn"] = "Sinh vi\u00EAn";
 })(Occupation = exports.Occupation || (exports.Occupation = {}));

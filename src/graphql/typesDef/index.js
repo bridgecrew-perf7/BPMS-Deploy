@@ -1,6 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.typeDefs = void 0;
-const NormalTypes_1 = require("./NormalTypes");
-const EnumTypes_1 = require("./EnumTypes");
-exports.typeDefs = [NormalTypes_1.NormalTypes, EnumTypes_1.EnumTypes];
+const ViewerTypes_1 = require("./ViewerTypes");
+const EnumTypes_1 = require("./MessageTypes/EnumTypes");
+const MemberTypes_1 = require("./MemberTypes");
+const MessageTypes_1 = require("./MessageTypes");
+const StatsTypes_1 = require("./StatsTypes");
+const OrganizationTypes_1 = require("./OrganizationTypes");
+const QueryMutation_1 = require("./QueryMutation");
+exports.typeDefs = [ViewerTypes_1.ViewerTypes, EnumTypes_1.EnumTypes, MemberTypes_1.MemberTypes, MessageTypes_1.MessageTypes, StatsTypes_1.StatsTypes, OrganizationTypes_1.OrganizationTypes, QueryMutation_1.QueryMutation];
